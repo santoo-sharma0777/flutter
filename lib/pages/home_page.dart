@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       ), //for app top bar
       body: Center(
           child:
-              Container(child: Text("Weome to $days days of flutter $name"))),
+              Container(child: Text("Welcome to $days days of flutter $name"))),
       drawer: Drawer(),
     );
   }
