@@ -7,6 +7,8 @@ import "package:velocity_x/velocity_x.dart";
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
+  const CatalogList({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -18,9 +20,7 @@ class CatalogList extends StatelessWidget {
             onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomeDetailPage(
-                      catalog: catalog,
-                    ),
+                    builder: (context) => HomeDetailPage(catalog: catalog),
                   ),
                 ),
             child: CatalogItem(catalog: catalog));
@@ -41,11 +41,8 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
       child: Row(
         children: [
-          Hero(
-            tag: Key(catalog.id.toString()),
-            child: CatalogImage(
-              image: catalog.image,
-            ),
+          CatalogImage(
+            image: catalog.image,
           ),
           Expanded(
               child: SingleChildScrollView(

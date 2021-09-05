@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 class HomeDetailPage extends StatelessWidget {
   final Item catalog;
 
-  const HomeDetailPage({required Key key, required this.catalog})
-      : super(key: key);
+  const HomeDetailPage({Key? key, required this.catalog}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
